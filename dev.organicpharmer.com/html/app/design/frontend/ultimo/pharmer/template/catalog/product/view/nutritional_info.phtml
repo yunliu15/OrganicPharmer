@@ -1,0 +1,289 @@
+<!-- begin nutritional  info -->
+
+<?php
+	
+/*
+	
+and there needs to be a lower case 'g' after values relating to fat, carb, protein, sugar and fiber and 'mg' for sodium values.
+
+*/
+
+?>
+
+
+<div class="nutrinfo">
+
+<div class="attr">
+<!--<div class="at-title">
+calories 
+</div>-->
+<div class="at-number" id="calories">
+<?php $calories = $_product->getData('calories'); 
+$calories = preg_replace("/[^0-9,.]/", "", $calories);
+echo $calories;
+	
+?>
+</div></div>
+<!-- end attribute -->
+
+<!--
+<div class="attr">
+<div class="at-title">
+fat
+</div>
+<div class="at-number" id="fat">
+<?php $fat = $_product->getData('fat'); 
+$fat= preg_replace("/[^0-9,.]/", "", $fat);
+echo $fat;?>
+
+</div></div>-->
+<!-- end attribute -->
+
+	<!--
+<div class="attr">
+<div class="at-title">
+carb
+</div>
+<div class="at-number" id="carb">
+<?php $carb = $_product->getData('carb'); 
+$carb = preg_replace("/[^0-9,.]/", "", $carb);
+echo $carb;
+
+if($_product->getData('carb'))
+{	
+	
+?> g
+
+<?php
+}
+?>
+
+
+
+</div></div>-->
+<!-- end attribute -->
+
+<!--
+<div class="attr">
+<div class="at-title">
+protein
+</div>
+<div class="at-number" id="protein">
+<?php $protein = $_product->getData('protein'); 
+$protein = preg_replace("/[^0-9,.]/", "", $protein);	
+echo $protein;
+
+if($_product->getData('protein'))
+{	
+	
+?> g
+
+<?php
+}
+?>
+	
+	</div></div>-->
+<!-- end attribute -->
+<!--
+<div class="attr">
+<div class="at-title">
+sugar
+</div>
+<div class="at-number" id="sugar">
+<?php $sugar = $_product->getData('sugar'); 
+
+$sugar = preg_replace("/[^0-9,.]/", "", $sugar);
+echo $sugar;
+	
+if($_product->getData('sugar'))
+{	
+	
+?> g
+
+<?php
+}
+?>
+
+</div></div>-->
+<!-- end attribute -->
+<!--
+<div class="attr">
+<div class="at-title">
+sodium
+</div>
+<div class="at-number" id="sodium">
+<?php $sodium = $_product->getData('sodium'); 
+$sodium = preg_replace("/[^0-9,.]/", "", $sodium);	
+echo $sodium;
+
+if($_product->getData('sodium'))
+{	
+	
+?> mg
+
+<?php
+}
+?>
+</div></div>-->
+<!-- end attribute -->
+<!--
+<div class="attr">
+<div class="at-title">
+fiber
+</div>
+<div class="at-number" id="fiber">
+<?php $fiber = $_product->getData('fiber'); 
+$fiber = preg_replace("/[^0-9,.]/", "", $fiber);
+echo $fiber;
+	
+if($_product->getData('fiber'))
+{	
+	
+?> g
+
+<?php
+}
+?>
+	
+</div></div>-->
+<!-- end attribute -->
+
+</div>
+<!-- end nutritional  info -->
+
+<script>
+
+	jQuery(".cal-alert").hide();
+
+	// will remove these 2 lines
+	//var d = jQuery("input:radio[name^=bundle_option][disabled=false]:first").attr('checked', true);
+	//var firstd=d[0];
+
+
+	jQuery(window).load(function(){
+
+		calculateNutrition();
+
+		jQuery('input[name^="bundle_option"]').on('change', calculateNutrition);
+		function calculateNutrition() {
+
+			/* Below we create variables for all meals/bundle products. It is based on the value of the checkbox that is selected
+			 We make sure to grab the 'title' attribute data as the 'value' because it contains a string of calories/fat/etc that we can work with.
+			 */
+
+			var breakfast = jQuery('input[data="breakfast"]:checked', '#product_addtocart_form').first().attr("title");
+
+			// alert(breakfast);
+
+			var mid_morning = jQuery('input[data="mid_morning_snack"]:checked', '#product_addtocart_form').first().attr("title");
+			var lunch = jQuery('input[data="lunch"]:checked', '#product_addtocart_form').first().attr("title");
+			var afternoon_snack = jQuery('input[data="afternoon_snack"]:checked', '#product_addtocart_form').first().attr("title");
+			var dinner = jQuery('input[data="dinner"]:checked', '#product_addtocart_form').first().attr("title");
+			var evening_snack = jQuery('input[data="evening_snack"]:checked', '#product_addtocart_form').first().attr("title");
+
+			// I could theoretically push these variables to a php processing page via ajax. Or should I just use jquery?
+
+			/* Blow up the string of each variable so we can have a value for calories, sugar, etc */
+
+			var breakfast_arr = breakfast.split('_');
+			var mid_morning_arr = mid_morning.split('_');
+			var lunch_arr = lunch.split('_');
+			var afternoon_snack_arr = afternoon_snack.split('_');
+			var dinner_arr = dinner.split('_');
+			var evening_snack_arr = evening_snack.split('_');
+
+			/* Turn the string values, after splitting/exploding the string, into integers so we can combine them for a total value such as total_calories */
+
+			var breakfast_calories = parseInt(breakfast_arr[0]);
+			var breakfast_fat = parseInt(breakfast_arr[1]);
+			var breakfast_carb = parseInt(breakfast_arr[2]);
+			var breakfast_protein = parseInt(breakfast_arr[3]);
+			var breakfast_sugar = parseInt(breakfast_arr[4]);
+			var breakfast_sodium = parseInt(breakfast_arr[5]);
+			var breakfast_fiber = parseInt(breakfast_arr[6]);
+
+			var mid_morning_calories = parseInt(mid_morning_arr[0]);
+			var mid_morning_fat = parseInt(mid_morning_arr[1]);
+			var mid_morning_carb = parseInt(mid_morning_arr[2]);
+			var mid_morning_protein = parseInt(mid_morning_arr[3]);
+			var mid_morning_sugar = parseInt(mid_morning_arr[4]);
+			var mid_morning_sodium = parseInt(mid_morning_arr[5]);
+			var mid_morning_fiber = parseInt(mid_morning_arr[6]);
+
+			var lunch_calories = parseInt(lunch_arr[0]);
+			var lunch_fat = parseInt(lunch_arr[1]);
+			var lunch_carb = parseInt(lunch_arr[2]);
+			var lunch_protein = parseInt(lunch_arr[3]);
+			var lunch_sugar = parseInt(lunch_arr[4]);
+			var lunch_sodium = parseInt(lunch_arr[5]);
+			var lunch_fiber = parseInt(lunch_arr[6]);
+
+			var afternoon_snack_calories = parseInt(afternoon_snack_arr[0]);
+			var afternoon_snack_fat = parseInt(afternoon_snack_arr[1]);
+			var afternoon_snack_carb = parseInt(afternoon_snack_arr[2]);
+			var afternoon_snack_protein = parseInt(afternoon_snack_arr[3]);
+			var afternoon_snack_sugar = parseInt(afternoon_snack_arr[4]);
+			var afternoon_snack_sodium = parseInt(afternoon_snack_arr[5]);
+			var afternoon_snack_fiber = parseInt(afternoon_snack_arr[6]);
+
+			var dinner_calories = parseInt(dinner_arr[0]);
+			var dinner_fat = parseInt(dinner_arr[1]);
+			var dinner_carb = parseInt(dinner_arr[2]);
+			var dinner_protein = parseInt(dinner_arr[3]);
+			var dinner_sugar = parseInt(dinner_arr[4]);
+			var dinner_sodium = parseInt(dinner_arr[5]);
+			var dinner_fiber = parseInt(dinner_arr[6]);
+
+			var evening_snack_calories = parseInt(evening_snack_arr[0]);
+			var evening_snack_fat = parseInt(evening_snack_arr[1]);
+			var evening_snack_carb = parseInt(evening_snack_arr[2]);
+			var evening_snack_protein = parseInt(evening_snack_arr[3]);
+			var evening_snack_sugar = parseInt(evening_snack_arr[4]);
+			var evening_snack_sodium = parseInt(evening_snack_arr[5]);
+			var evening_snack_fiber = parseInt(evening_snack_arr[6]);
+
+			/* Let's create the variables for total calories, total fat, etc */
+
+			var total_calories = breakfast_calories + mid_morning_calories + lunch_calories + afternoon_snack_calories + dinner_calories + evening_snack_calories;
+			var total_fat = breakfast_fat + mid_morning_fat + lunch_fat + afternoon_snack_fat + dinner_fat + evening_snack_fat;
+			var total_carb = breakfast_carb + mid_morning_carb + lunch_carb + afternoon_snack_carb + dinner_carb + evening_snack_carb;
+			var total_protein = breakfast_protein + mid_morning_protein + lunch_protein + afternoon_snack_protein + dinner_protein + evening_snack_protein;
+			var total_sugar = breakfast_sugar + mid_morning_sugar + lunch_sugar + afternoon_snack_sugar + dinner_sugar + evening_snack_sugar;
+			var total_sodium = breakfast_sodium + mid_morning_sodium + lunch_sodium + afternoon_snack_sodium + dinner_sodium + evening_snack_sodium;
+			var total_fiber = breakfast_fiber + mid_morning_fiber + lunch_fiber + afternoon_snack_fiber + dinner_fiber + evening_snack_fiber;
+
+
+// alert(total_calories);
+
+
+			/* If total_calories is > 2000 we show a text message that is located within a class called 'cal-alert'. If not, we hide that div class. */
+
+			if(total_calories > 1400) {
+				jQuery(".cal-alert").show();
+			}
+			else{
+				jQuery(".cal-alert").hide();
+			}
+
+			/* Let's place the total values in their appropriate tab area - we target ID's such as calories for the calorie data, "fat" for fat etc */
+
+			jQuery("#calories").html(total_calories).show();
+			//jQuery("#fat").html(total_fat + "g").show();
+			//jQuery("#carb").html(total_carb + "g").show();
+			//jQuery("#protein").html(total_protein + "g").show();
+			//jQuery("#sugar").html(total_sugar + "g").show();
+			//jQuery("#sodium").html(total_sodium + "mg").show();
+			//jQuery("#fiber").html(total_fiber + "g").show();
+
+		}// end of .live function
+
+	});
+
+
+	// end of load function
+
+
+
+	// alert(first
+	//
+</script>
