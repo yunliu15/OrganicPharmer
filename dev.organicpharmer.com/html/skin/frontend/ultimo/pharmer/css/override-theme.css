@@ -1,0 +1,1096 @@
+	/**
+	 * Theme-specific styles
+	 */
+	
+	
+	/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	   Override/extend styles.css %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+	
+	/* Layout %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+	
+	.wrapper { border-top-style:solid; border-top-width:0px; }
+	.main { padding:0px 0 15px; }
+	
+	/* Additional margin for main sidebars
+	-------------------------------------------------------------- */
+	.col-left > * { margin-right: 15px; }
+	.col-right > * { margin-left: 15px; }
+	
+	.gen-tabs .tabs a.current {
+	background-color: #FFF;
+	color: #000000;
+	}
+	.sep { border-bottom: none !important;}
+	img.red-logo { text-align:center;}
+	.contain-centered.meet-team { width:60%; margin-left: 20%; padding-top: 20px; padding-bottom: 50px;}
+	.contain-centered.meet-team img { width: 30%; margin-left: 35%; margin-top: 40px; margin-bottom: 10px;}
+	ol.m-filter-css-checkboxes li {  clear: both;}
+	.form-search .input-text { background-color: transparent;}
+	.gen-tabs .tabs { border: 1px solid #ccc;  }
+	.tabs.clearer { padding-top: 0px;}
+	.gen-tabs-style1 .tabs a.current {
+		background:url(../images/img/5px-red.png); background-repeat: repeat-x; background-position: bottom;
+background-color: #FFF;
+border-color: transparent;
+padding-top: 7px;
+padding-bottom: 4px;
+
+margin-top: 0px;}
+
+h2.acctab { clear: both;}
+
+#accordion h3 { font-size: 16px; cursor: pointer; padding: 25px;}
+
+/*border-bottom:thick solid #81143A;*//*}*/
+.tabs.clearer a{ text-align: left;}
+.tabs-panels { text-align: left;}
+.gen-tabs-style1 .tabs a.current:hover {
+		background:url(../images/img/5px-red.png); background-repeat: repeat-x; background-position: bottom;
+background-color: #FFF;
+border-color: transparent;
+padding-top: 7px;
+
+margin-top: 0px;
+/*border-bottom:thick solid #81143A;*/}
+/*.category-weekend-juice .gen-tabs-style1 .tabs a.current:hover { padding-top: 10px;}*/
+.gen-tabs-style1 .tabs-panels {
+border-top: 1px solid #ffffff;
+}
+.gen-tabs li {
+width: 20%;
+line-height: 1.0em;
+min-height: 40px;
+background: #ffffff;
+}
+
+body.product-1-day-juice-cleanse .gen-tabs li { 
+width: 16.6666666666%;
+}
+
+body.product-1-day-juice-cleanse .gen-tabs .tabs a {
+padding: 5px 10px 0 5px;
+}
+
+body.product-1-day-juice-cleanse .gen-tabs-style1 .tabs a.current:hover {
+padding-top: 5px;}
+
+
+.gen-tabs .tabs a:hover { border: 1px solid transparent;}
+.gen-tabs .tabs a {
+line-height: 1.3em;
+font-family: 'MyriadProRegular';
+text-transform: uppercase;
+font-size: 14px !important;
+padding-top: 15px;
+color: #333;
+background: #ffffff;
+}
+.gen-tabs .tabs a {
+min-height: 63px;
+padding-top: 7px;
+padding-bottom: 4px;
+}.gen-tabs .tabs a:hover { border-right: 1px solid transparent; border-top: 1px solid transparent; border-bottom: none; border-right: 1px solid transparent;}
+.gen-tabs .tabs a:hover, .gen-tabs .tabs a:focus {
+background-color: #ffffff;
+color: #333;background:url(../images/5px-grey.png); background-repeat: repeat-x; background-position: bottom;
+}
+.categorypath-cleanses .no-cat-desc { display: none;}
+
+.status-unavail { clear: both; font-size: 13px; margin-top: 20px; letter-spacing: .15em; border: 1px solid #eeeeee; float: left; padding: 5px; width: 100%; text-align: center; background: #f8f8f8;} 
+
+
+/** fixing the gift card styles test test  ***/
+
+.giftcard-template-content-left .giftcard-logo {
+display: none;
+}
+.select-template { display: none;}
+
+.giftvoucher-product-info #giftcard-template-show-images {
+display: none;
+}
+body.product-organic-pharmer-gift-card .product-img-column.grid12-4 {
+width: 58%;
+margin-right: 2%;
+margin-left: 2%;
+}
+.giftcard-product-media {
+width: 550px !important;
+}
+#giftcard-template-left .giftcard-template-content {
+width: 298px !important;
+background-image: none !important;
+background-color: #f8f8f8;
+border: 1px solid #e0e0e0;
+}
+
+#giftcard-template-left .giftcard-template-content div.giftcard-from-to, #giftcard-template-left .giftcard-template-content div.giftcard-box, #giftcard-template-left .giftcard-template-content div.giftcard-text {
+width: 260px !important;
+}
+#giftcard-template-left .giftcard-template-content .value-barcode {
+width: 260px !important;
+}
+#giftcard-template-left .giftcard-template-content div.giftcard-code {
+width: 150px !important;
+}
+.giftcard-text .giftcard-text-color {
+font-weight: 100 !important;
+}
+#giftcard-template-left .giftcard-template-content div.giftcard-style-color {
+color: #000000 !important;
+}
+#giftcard-template-left .giftcard-template-content span.giftcard-style-color span.price{
+color: #000000 !important;
+}
+#giftcard-preview-button-add { float: left !important;}
+
+#giftcard-preview-button-add span span {
+padding-left: 30px !important;
+float: left !important;
+}
+#popup-giftcard {
+position: fixed;
+z-index: 1000;
+width: 550px !important;
+left: 50%;
+top: 20%;
+margin-left: -300px;
+}
+.giftvoucher-product-info {
+overflow: hidden;
+display: block;
+font-size: 13px;
+clear: both;
+letter-spacing: .15em;
+}
+
+.giftvoucher-product-info select { width: 150px!important; display: none;}
+
+.giftvoucher-product-info div { margin: 0 0 0 0; margin-left: 0px  !important; line-height: 28px;}
+.giftvoucher-product-info .uploader { clear: both; padding: 0 0 0 0; margin: 0 0 10px 0;} 
+.giftvoucher-product-info p.note { padding: 0 0 0 0 !important;}
+
+.giftvoucher-product-info p { margin: 0 0 10px 0; font-size: 13px;}
+
+p.giftcard-send-friend { padding-top: 10px;}
+.giftvoucher-product-info p span {letter-spacing: .15em;}
+
+#m-tree-item-80.m-tree-item { padding-top: 2px !important;}
+
+li.m-leaf .m-tree-item#m-tree-item-80 a{
+font-size: 14px!important;
+padding-left: 0px !important;
+text-transform: uppercase !important;
+line-height: 1em; 
+padding: 2px 0; }
+
+@media (max-width : 500px) { 
+	
+	#giftcard-template-left .giftcard-template-content div.giftcard-from-to, #giftcard-template-left .giftcard-template-content div.giftcard-box, #giftcard-template-left .giftcard-template-content div.giftcard-text {
+width: 300px !important;
+}
+
+
+body.product-organic-pharmer-gift-card	.product-view .product-img-column {
+height: auto !important;
+}
+	
+.giftcard-product-media {
+width: 100% !important;
+}
+#giftcard-template-left .giftcard-change-image {
+display: none;
+}
+#giftcard-template-left .giftcard-template-content {
+width: 100% !important;
+}
+}
+
+
+.category-soups a.product-image {min-height: 254px;}
+.category-infused-cold-pressed a.product-image, .category-infused-milk a.product-image , .category-protein-shakes a.product-image  { min-height: 260px;}
+/** end gift card styles **/
+
+
+	/* Global Styles %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+	
+	/* Form
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	*/
+	/* Fieldset
+	-------------------------------------------------------------- */
+	/* Common styles for fieldsets and blocks in Multiple Addresses Checkout and Generic Info Set */
+	.fieldset,
+	.multiple-checkout .col2-set,
+	.multiple-checkout .col3-set,
+	.info-set {
+		margin:0 0 10px;
+	 /*   padding:0 15px 15px;*/
+	}
+	.fieldset .legend,
+	.multiple-checkout .col2-set h2.legend,
+	.info-set h2.legend {
+		/*margin:0 -15px 10px -15px;
+		padding-left:15px; padding-right:15px;*/
+	}
+	.prod-desc { text-align: left;}
+	.review-product-list #product-tabs { margin-left: 18%; width: 60%;}
+	/*.category-3-day-juice .gen-tabs .tabs a, .category-weekend-juice .gen-tabs .tabs a {
+display: block;
+padding: 10px 20px 0 10px;
+text-decoration: none;
+outline: none;
+min-height: 30px;
+}
+.category-5-day-juice .gen-tabs .tabs a {
+display: block;
+padding: 10px 47px 0 10px;
+text-decoration: none;
+outline: none;
+min-height: 70px;
+}
+.category-5-day-juice .gen-tabs li{ max-width: 174px;}*/
+
+	/* Buttons set
+	-------------------------------------------------------------- */
+	.buttons-set { margin:10px 0px}
+	/* Note: buttons and "required" have equal right margin */
+	.buttons-set button.button { margin-left:0; margin-right:5px; margin-bottom:5px; }
+	.buttons-set p.required { margin:0 5px 5px 0; }
+	
+	.one-day { margin-top: 20px;}
+	.one-day img { float: left; margin-right: 5px; width: 48px; height: 50px;}
+	.itemgrid-4col p.availability span { width: 105px; padding-left: 60px;}
+	 .itemgrid-4col.soup-grid p.availability span { width: 105px; padding-left: 0px;}
+	
+	/* Page Heading
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	*/
+	.2col-faq { width: 100%;}
+	.col1-layout .grid-full ul.faq { list-style-type: disc; padding-left: 20px; margin: 10px 0;}
+	.col1-layout .grid-full h2 { font-size: 16px;}
+	.col1-layout .grid-full ul.slides { list-style-type: none; padding-left: 0px; margin: 0px 0;}
+	
+	.page-title h1,
+	.page-title h2, .desc-strong, .pg-strong {font-size: 16px;
+	line-height: 1.3333em;
+	font-family: 'myriad_prolight' !important;
+	font-weight: normal;
+	letter-spacing: .15em !important;
+	text-transform: uppercase;
+	padding-top: 15px;}
+	.category-title { margin-bottom:0;}
+	
+	.clearsmooth p { margin-top: 10px;}
+	/* Global Messages
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	*/
+	.note-msg.empty-catalog {
+		background:url(../images/img/empty-catalog.png) 10px 10px no-repeat transparent !important;
+		color:inherit;
+		min-height:70px;
+		margin-top: 50px;
+		padding:50px 20px 40px 160px !important;
+	}
+	
+	
+	/* bread - breakfast page */
+	.break-right {
+		text-align: right;
+width: 48%;
+}
+	.bread-desc {
+		width: 100%;
+		margin-top: -30px;
+		margin-bottom: 100px;
+	}
+img.breakfast-image {
+width: 100%;
+margin-top: -30px;
+}
+
+	
+	/* BreadCrumbs
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	*/
+	.breadcrumbs { line-height:1.5em; /*18px*/ margin:0 0 5px;}
+	/* Breadcrumbs on product page */
+	.catalog-product-view .breadcrumbs { margin-bottom:10px; }
+	.col2-right-layout .grid-col2-main .page-title h1 { border-bottom: 1px solid #e5e5e5; padding-bottom: 10px;}
+	
+	.narrow-by-list dt.even, .narrow-by-list dt.odd { font-size: 16px;clear: both; display: block;}
+.narrow-by-list dt.odd { /*margin-top: 10px;*/}
+	
+	/* Header %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+	
+	.header-main { margin: 10px 0; }
+	
+	/* Line breaker */
+	.user-menu .line-break-after { clear:both; margin-bottom: 1px; }
+	
+	/* Quick search: skins
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	*/
+	/* Search: inline
+	-------------------------------------------------------------- */
+	.search-wrapper-inline .form-search .input-text { min-width: 180px; }
+	
+	
+	/* Quick search: positions
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	*/
+	/* Position 0 */
+	.search-wrapper-p0 { float: right; }
+	.search-wrapper-p0 .form-search .input-text { min-width: 220px; }
+	
+	/* Position 1 - right side of top links */
+	.search-wrapper-p1 { float: right; }
+	.search-wrapper-p1 .form-search .input-text { min-width: 220px; }
+	
+	/* Position 2 - right side of top links */
+	.search-wrapper-p2 { float: right; }
+	.search-wrapper-p2 .form-search .input-text { min-width: 220px; }
+	
+	/* Position 3 - right side of top links */
+	.search-wrapper-p3 { float: right; }
+	.search-wrapper-p3 .form-search .input-text { min-width: 220px; }
+	
+	/* Position 4 - right side of top links */
+	.search-wrapper-p4 { float: right; }
+	.search-wrapper-p4 .form-search .input-text { min-width: 220px; }
+	
+	/* Position 5 - right side of top links */
+	.search-wrapper-p5 { float: right; }
+	.search-wrapper-p5 .form-search .input-text { min-width: 220px; }
+	
+	.is-blog .grid-col2-main {
+width: 70% !important;
+margin-left: 5%;
+margin-right: 2%;
+}
+.is-blog .pager .pages li a:hover { color: #ffffff !important;}
+
+.post-view .post-entry { margin-bottom: 100px;}
+	/* Mini-cart
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	*/
+	/*#mini-cart { margin-bottom:-8px; }*/
+	
+	
+	
+	/** fix shop all */
+	
+	ul.products-grid h2.catTitle { height: auto !Important; display: block !Important; clear: both; margin: 20px 0; padding: 10px;  font-family: 'MyriadProRegular' !important;
+    font-size: 16px; background: #F2F2F0 ;}
+	
+	ul.products-grid h2.catTitle-parent { height: auto !Important; display: block !Important; clear: both; margin: 20px 0; padding: 10px;  font-family: 'MyriadProRegular' !important;
+    font-size: 16px; background: #81143A ; color: #ffffff;}
+	
+	
+	.categorypath-shop-all .itemgrid-3col .item:nth-child(3n+1) {
+    clear: none;
+}
+.categorypath-shop-all .block-title { padding-top: 0px; line-height: 1em; }
+.block-layered-nav dd {
+    padding: 0px 0 0px 0px;
+}
+	
+	@media only screen and (max-width: 767px) and (min-width: 640px) {
+.categorypath-shop-all .itemgrid.itemgrid-adaptive .item:nth-child(3n+1) {
+    clear: none !important;
+}
+
+	}
+	
+	@media only screen and (max-width: 479px) and (min-width: 320px) {
+.categorypath-shop-all .itemgrid.itemgrid-adaptive .item:nth-child(2n+1) {
+    clear: none !important;
+}
+	}
+@media (max-width: 480px) {
+.products-grid button.btn-cart { 
+    width: 65% !important;
+	float: none!important;
+	margin-right: none!important;
+}
+.mb-category-products .product-image-wrapper {
+    min-height: 100px !important;
+}
+
+}
+
+
+	/* Sidebar %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+	
+	/* Block lists
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	*/
+	.block-viewed .block-content ol,
+	.block-compare .block-content ol,
+	.block-compared .block-content ol {
+		padding-left: 0;
+		list-style: none;
+	}
+	.block-viewed .block-content li.item,
+	.block-compare .block-content li.item,
+	.block-compared .block-content li.item {
+		background:url(../images/img/bullet.png) no-repeat 0 10px;
+		padding-left:10px;
+	}
+	
+	
+	/* Block: Related
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	*/
+	/* Align block title with the tabs on product page */
+	.block-related .section-title { padding-top: 19px; }
+	
+	
+	/* Block: Account
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	*/
+	.block-account .block-title { background:url(../images/img/ic-account.png) 5px 2px no-repeat; padding-left:42px !important; }
+	.block-account .block-content { padding:10px 0 0; }
+	.block-account li > * { padding: 2px; }
+	.block-account li.current strong { font-family: 'MyriadProRegular'; }
+	
+	
+	
+	/* Category view %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+	.products-grid .item { -webkit-tap-highlight-color: transparent; }
+	
+	
+	
+	/* Product view elements %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+	
+	/* Availability
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	*/
+	.availability { float:left; margin:15px 0; }
+	
+	
+	
+	/* Product page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+	
+	/* Prices
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	*/
+	/* Bundle product */
+	.price-box-bundle {
+		
+		margin:-10px 0 15px; /* Move up to align with the main price box */
+		padding-bottom:15px;
+	}
+	
+	
+	/* Main containers
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	*/
+	/* Margin before price box */
+	.product-view .space-before-avail { margin:0 0 15px; height:0; line-height:0; }
+	
+	/* Upper part of the container */
+	.product-view .product-type-data > .price-box {
+		border-top-style:solid;
+		border-top-width:1px;
+		margin:15px 0 0;
+		padding:10px 0;
+	}
+	
+	/* Other
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	*/
+	/* Add to cart button */
+	.product-view .btn-cart span span { padding:0px 30px; }
+	
+	/* Reviews */
+	.product-view .box-reviews .buttons-set { margin-left:0; margin-right:0; }
+	
+	
+	/* New elements
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	*/
+	.product-view .sku { margin: 15px 0; }
+	.product-view .sku span { font-weight: bold; }
+	
+	
+	/* Product type specific data
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	*/
+	.product-view .is-type-grouped .availability { margin-top:0; margin-bottom:0; }
+	.product-view .grouped-items-table input.input-text { height: 26px; padding:4px; /* Decrease default height and padding */ }
+	
+	.price-box .regular-price .price, .price-box .minimal-price .price { 
+	color: #81143A ; font-size: 16px !Important;
+	}
+	
+	/*Shop All*/
+	.mb-category-products .product-image-wrapper img {max-height:200px;}
+	.mb-category-products .product-image-wrapper {min-height:200px;}
+	
+	.products-grid .price-box{color:#BBBBBB;}
+	.products-grid .price{color:#bbbbbb !important;}
+	.mb-category-products .category-products ul.products-grid li h2.product-name{margin-bottom:10px;}
+	.mb-category-products .product-name{min-height:40px;}
+	.category-shop-all .mb-category-products .products-grid.equal-height .item .actions{bottom:35px !important;}
+
+	.m-tree-item{font-size:14px; text-transform: uppercase;}
+	
+	/*instant cart */
+	#MB_header{background-color:#bbb;}
+	#MB_caption{  text-shadow: none;}
+	#MB_window {
+		-webkit-box-shadow: 3px 3px 25px 5px #F4F1F3 ;
+		-moz-box-shadow: 3px 3px 25px 5px #F4F1F3  ;
+		box-shadow:3px 3px 25px 5px #F4F1F3  ;
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		border-radius: 0px;
+		  max-height: 1000px;
+	}
+	#MB_frame{
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		border-radius: 0px;
+		
+	}
+
+	/* Bundle Products */
+
+	.product-options dt label {font-size:16px !important; font-family: 'MyriadProRegular' !important; text-transform: uppercase;}
+	.product-options dt {padding:10px; background: #F2F2F0; margin: 25px 0 20px 0;}
+	.product-options ul.options-list label {font-size:16px !important;}
+	.product-options, .product-options-bottom {width: 60%; margin-left: 20%;}
+	.product-options ul.options-list input.radio {margin-top:5px;}
+	.price-as-configured .price {color:#81143A;}
+	.product-my-day-of-food .product-img-column p.product-image img {max-height:600px; float:right; height:auto; width:auto;}
+	.product-my-day-of-food .product-img-column.grid12-4 {width: 60%; margin-left: 2%;}
+
+	.product-my-day-of-food .box-additional {margin-top:0px !important;}
+	.product-my-day-of-food .prod-desc {padding-top:15px !important;}
+	.product-my-day-of-food .ingredients {display:none;}
+	.product-my-day-of-food .nutrinfo {margin: 0 0 40px 0;}
+
+
+	/*.cal-alert {clear:both; border:2px solid #81143A; background: #F2F2F0; padding:15px; margin-top:40px; display: inline-block;}*/
+	.cal-alert {clear:both; border:2px solid #81143A; background: #F2F2F0; padding:15px 1%; margin-top:40px; display: inline-block;width: 98%;letter-spacing: .06em;
+	}
+
+	.cal-alert p {line-height: 1.5; text-align:center; color: #81143A; font-style: italic; font-size:13px; font-family: 'MyriadProRegular' !important;}
+	
+	
+	/* My Account %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+	
+	/*.my-account .pager { margin: -1px 0 20px; }*/
+	
+	
+	
+	/* Footer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+	
+	/* Footer primary
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	*/
+	.footer-primary .section { padding-top: 20px; padding-bottom: 0px; }
+	
+	
+	
+	
+	
+	/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	   Misc %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+	
+	/* Accordion & Collapsible %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+	
+	/* Accordion - Style 1
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	*/
+	.accordion-style1 li a {
+		border-bottom-color:#eee;
+		border-bottom:1px solid rgba(0,0,0,0.06);
+	}
+	.accordion-style1 li a:hover {
+		background-color:rgba(0,0,0, 0.03);
+	}
+	
+	/* Opener
+	-------------------------------------------------------------- */
+	.accordion-style1 .opener {
+		background-color:rgba(0,0,0, 0.03);
+	}
+	
+	
+	
+	/* Other modifications %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+	
+	/* Nav container:
+	   with outline (if nav container has background color) or without outline (stretched)
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	*/
+	/* With outline
+	-------------------------------------------------------------- */
+	/* Add top and bottom margin */
+	.nav.has-outline > .grid-full { margin-top: 1%; margin-bottom: 1%; }
+	.nav.has-outline #mobnav { margin-bottom: 0; } /* Trigger has no bottom margin */
+	
+	/* Without outline
+	-------------------------------------------------------------- */
+	/* If menu stretched, no top and bottom margin. Important: added "container" class to make the selector more specific */
+	.container.nav.stretched > .grid-full { margin-top: 0; margin-bottom: 0; }
+	/*.nav > .grid-full { float:left; }*/
+	
+	
+	/* Cart
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	*/
+	/* Collateral boxes - stretch */
+	.cart-left-column .grid-full,
+	.cart-right-column .grid-full { width:100%; }
+	
+	
+	/* Interface icons
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	*/
+	
+	/* Icons with no background
+	-------------------------------------------------------------- */
+	/* Toolbar */
+	.sorter .view-mode a,
+	.sorter .sort-by .category-asc,
+	.sorter .sort-by .category-desc,
+	.pager .pages li a,
+	
+	/* Add-to links */
+	.add-to-links.addto-icons a,
+	
+	/* Slider arrows */
+	.gen-slider-arrows3 .direction-nav a,
+	.gen-slider-arrows3 .direction-nav a.disabled:hover
+	{
+		background-color:transparent;
+	}
+	
+	/* Other icons
+	-------------------------------------------------------------- */
+	/* Add-to links icons in product grid */
+	.products-grid .addto-links-icons span.icon { border-radius: 0; }
+	
+	/* Pager */
+	.pager .pages li a { background-color:#f5f5f5; }
+	
+	/* Add-to links */
+	.addto-links-icons span.icon,
+	.add-to-links.addto-icons a, /* Obsolete */
+	
+	/* Slideshow directional arrows */
+	.gen-slider-arrows2 .direction-nav a,
+	.gen-slider-arrows2 .direction-nav a.disabled:hover { background-color:#fff; }
+	
+	
+	
+	
+	
+	/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	   Built-in static blocks %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+	
+	/* Deprecated: Header top - help block */
+	.header-top .phone { background:url(../images/img/ic-phone.png) 0 center no-repeat; padding:0 0 0 24px; }
+	
+	.block_category_above_collection { margin:10px 0; }
+	.block_category_below_collection { margin:10px 0; }
+	.block_category_above_empty_collection { margin:10px 0; }
+	
+	/*.block_product_primary_bottom {}
+	.block_product_secondary_bottom {}
+	.block_product_replace_related {}
+	.block_product_replace_upsell {}
+		
+	.block_cart_below_totals {}
+	.block_cart_below_table {}*/
+	
+	.block_mini_cart_above_products { margin:0 0 10px; }
+	
+	.block_opc_below_progress { margin:15px 0; }
+	
+	.block_cms_page_top { margin:0 0 15px; }
+	
+	/*.block_header_top_left {}
+	.block_header_top_left2 {}
+	.block_header_top_right {}
+	.block_header_top_right2 {}
+	
+	.block_footer_primary_bottom_left {}
+	.block_footer_primary_bottom_right {}*/
+	.block_footer_payment { /*margin-right:10px;*/ /*margin-bottom:10px;*/ margin-left:20px; }
+	
+	/* Sample block content
+	-------------------------------------------------------------- */
+	.sample-block {
+		color:#999;
+		margin-top:10px;
+		padding: 0 !important;
+		transition:			color 300ms ease-in-out, background-color 300ms ease-in-out;
+		-moz-transition:	color 300ms ease-in-out, background-color 300ms ease-in-out;
+		-webkit-transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+		-o-transition:		color 300ms ease-in-out, background-color 300ms ease-in-out;
+	}
+	.sample-block:hover { color:#333; }
+	
+	
+	
+	
+	
+	
+	
+	/* If you're not going to sell - don't have the add to cart button, then it doesn't make sense to have 
+	availablilty (stock) or quantity to buy indicators */
+	
+	/* In this site as in most of our sites, "in-stock" is never displayed;
+	price, quantity and add to cart are not displayed on any product list pages (maybe price should be?). 
+	These product list pages include normal list pages, simple search results pages, and maybe? layered navigation results pages.
+	*/
+	
+	
+	.qty-label { padding-top: 20px; padding-left: 20px;}
+	.product-shop .qty-label { display: none;} 
+	
+	
+	.attr { width: 14.25%; float: left;}
+	.notice{ clear: both; float: left; padding-top: 40px; color: #000000; font-size: 13px;}
+	.at-title { border-bottom: 1px solid #000000; padding: 0 0 5px 0; margin: 0 0 5px 0;}
+	.nutrinfo { margin: 40px 0; overflow: auto;}
+	.product-make-my-day .nutrinfo {margin: 20px 0;}
+
+
+	.product-make-my-day .product-view .box-additional {margin-top: 0;}
+
+	.product-make-my-day .ingredients h3 {margin-top: 0;}
+		/* Uncomment the following for the site with nothing on sale */
+	
+	/* .add-to-cart button.btn-cart, button.btn-cart { display: none; }
+	label.qty-label, .qty, .qty-box { display: none; }
+	.out-of-stock { display: none; }         /* could equally well use availability class */
+	
+	
+	.travel-plans {font-size: 16px;
+  letter-spacing: .1em;
+  width:100%; 
+  line-height: 1.4em;
+  /* line-height: 18px; */
+  clear: both; margin: 20px 0 0px 0;} 
+  
+  span.special {  color: #81143A; font-family: 'MyriadProRegular' !important;}
+  
+	
+	
+	body.catalogsearch-result-index .category-products-grid .product-image img { max-height: 145px; width: auto;}
+	body.category-infused-cold-pressed .category-products-grid .product-image img, /*body.category-travel-juice .category-products-grid .product-image img,*/ body.category-protein-shakes .category-products-grid .product-image img, body.category-shots .category-products-grid .product-image img, body.category-infused-milk .category-products-grid .product-image img  { max-height: 260px;}
+	body.category-infused-cold-pressed .category-products-grid  h2.product-name, /*body.category-travel-juice .category-products-grid  h2.product-name, */body.category-protein-shakes .category-products-grid   h2.product-name,  body.category-infused-milk .category-products-grid  h2.product-name  { padding-left: 72px; padding-right: 8px;}
+	body.category-shots .category-products-grid   h2.product-name { padding-left: 55px; padding-right: 00px;}
+	
+	body.category-shots .category-products-grid   h2.product-name { padding-left: 55px; padding-right: 00px;}
+	
+	body.category-shots .products-grid button.btn-cart,  /*body.category-travel-juice .products-grid button.btn-cart,*/ body.category-infused-cold-pressed .products-grid button.btn-cart, body.category-protein-shakes .products-grid button.btn-cart, body.category-infused-milk .products-grid button.btn-cart {
+  width: 60%;
+  float: right;
+  margin-right: 19px !important;
+}
+body.category-shots .products-grid .price-box,  /*body.category-travel-juice .products-grid .price-box,*/ body.category-infused-cold-pressed .products-grid .price-box, body.category-protein-shakes .products-grid .price-box, body.category-infused-milk .products-grid .price-box {
+	margin-left:62px;
+	}
+
+body.category-shots .products-grid input#qty, body.category-infused-cold-pressed .products-grid input#qty, body.category-protein-shakes .products-grid input#qty, body.category-infused-milk .products-grid input#qty {
+  width: 15%;
+  margin-left: 20%;
+  float: left;
+  height: 31px;
+  text-align: center;
+}
+	
+	body.category-salads .category-products-grid   h2.product-name,  body.category-raw-detox-salads .category-products-grid  h2.product-name, body.category-sides .category-products-grid  h2.product-name , body.category-snacks .category-products-grid  h2.product-name  { padding-left: 20px; padding-right: 20px;}
+	
+	.product-view .product-shop .price-box .regular-price .price { clear: both; float: left;}
+	.review-product-list .product-img-column.grid12-4 { width: 60%; margin-left: 2%; }
+	.review-product-list .col1-layout .col-main {padding-top: 60px;}
+	.review-product-list .col1-layout .col-main {text-align: right;}
+	.form-add { text-align: left;}
+	#advancereviews-filters{text-align:left;}
+	
+		
+	/** newsletter**/
+	
+	.footer-secondary { background: #939195; margin-top: -40px;}
+	#subscribe-form { padding-lefT: 47px;}
+	.footer-secondary .clearer { padding: 0 0 10px 0;}
+	#subscribe-form { position: relative; top: -10px;}
+	#subscribe-form label { color: #EFEEDB;
+text-transform: uppercase; font-size: 14px; margin: 0 10px 0 0 !important;
+letter-spacing: 0.1em; font-family: 'myriad_prolight' !important;}
+.footer-primary.bg-nw {
+background-color: #939195 !important;
+padding-top: 20px;
+padding-bottom: 0px !Important;
+position: relative;
+top: -10px;
+}
+#subscribe-form .input-box {
+float: left;
+margin: 0 10px 5px 0 !important;
+position: relative;
+}
+
+/** blog **/
+
+
+.post-list-item { margin-bottom: 100px;}
+.post-meta { display: none;}
+
+	
+@media (max-width : 768px) {
+
+.category-shop-all .mb-category-products .products-grid.equal-height .item .actions{
+	bottom:25px !important
+	}
+.products-grid .item button.btn-cart span span {
+  padding: 0 0 0 0 !Important;
+  height: auto;
+  line-height: 35px; 
+}
+.price-box {
+  margin: 20px 0 20px 0;
+}
+
+button.btn-checkout span span, .product-view .btn-cart span span {
+  padding: 0px 20px !important;
+}
+	/* bread - breakfast page */
+	.break-right {
+		text-align: right;
+width: 100%; text-align: center; 
+}
+
+.break-left { width: 100%; text-align: center;}
+
+	.bread-desc {
+		width: 100%;
+		margin-top: -30px;
+		margin-bottom: 100px;
+	}
+img.breakfast-image {
+width: 100%;
+margin-top: 0px;
+}
+
+
+		
+		.is-blog .grid-col2-main {
+width: 96% !important;
+margin-left: 2%;
+margin-right: 2%;
+}
+.is-blog table { width: 100% !important;}
+.is-blog table img { height: auto !Important;}
+
+}
+
+	/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	   High-resolution-ready (retina-ready) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+	
+	@media (max-width : 640px) {
+	.category-shop-all .mb-category-products .products-grid.equal-height .item .actions{
+	bottom:20px !important
+	}
+}
+	
+	@media (max-width : 480px) {
+			.products-grid button.btn-cart {
+  width: 65%;
+  float: right;
+  margin-right: 0% !important;
+}
+		
+		.bread-desc {
+		width: 100%;
+		margin-top: -10px;
+		margin-bottom: 100px;
+	}
+	
+		.is-blog .grid-col2-main {
+width: 96% !important;
+margin-left: 2%;
+margin-right: 2%;
+}
+.is-blog table { width: 100% !important;}
+.is-blog table img { height: auto !Important;}
+		
+		.attr { width: 100%; float: left; border-bottom: 1px solid #000000; margin-bottom: 10px;}
+		.at-title, .at-number { width: 50%; float: left; border-bottom: none; }
+	.notice{ clear: both; float: left; padding-top: 40px; color: #000000; font-size: 13px;}
+	.at-title { border-bottom: 0px solid #000000; padding: 0 0 5px 0; margin: 0 0 0px 0;}
+	.nutrinfo { margin: 40px 0;}
+	
+		.contain-centered.meet-team { width:100%; margin-left: 0%; /* button.btn-cart { display: none; }
+	.qty, #qty { display: none; } */
+	 padding-bottom: 50px;}
+	.contain-centered.meet-team img { width: 50%; margin-left: 25%; margin-top: 40px; margin-bottom: 10px;}
+	.review-product-list #product-tabs {
+margin-left: 0%;
+width: 100%;
+}
+.product-view .box-reviews, a.nobr {
+width: 100% !important;
+margin-left: 0% !important;
+}
+.product-view .product-shop .price-box .regular-price .price {
+clear: both;
+float: none;
+}
+body.category-infused-cold-pressed .category-products-grid h2.product-name, body.category-protein-shakes .category-products-grid h2.product-name, body.category-infused-milk .category-products-grid h2.product-name {
+padding-left: 35px;
+padding-right: 0px;
+}
+.cat-body { padding: 0 0 30px 0;} 
+	}
+	
+	@media
+	only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	only screen and (   min--moz-device-pixel-ratio: 1.5),
+	only screen and (     -o-min-device-pixel-ratio: 3/2),
+	only screen and (    -ms-min-device-pixel-ratio: 1.5),
+	only screen and (        min-device-pixel-ratio: 1.5)
+	{
+	
+		/* Rating */
+		.rating-box,
+		.rating-box .rating { background-image:url(../images/img/rating@2x.png); background-size:14px 43px; }
+		
+		/* Theme icons
+		-------------------------------------------------------------- */
+		/* To top */
+		#scroll-to-top,
+		
+		/* Search button */
+		.header .form-search .button span,
+		
+		/* All icons from icons-theme.css */
+		/* Row 1: */
+		.icon.i-wishlist,
+		.icon.i-wishlist-w,
+		.icon.i-wishlist-bw,
+		.icon.i-wishlist-wb,
+		
+		.icon.i-compare,
+		.icon.i-compare-w,
+		.icon.i-compare-bw,
+		.icon.i-compare-wb,
+		
+		.icon.i-recommend,
+		.icon.i-recommend-w,
+		.icon.i-recommend-bw,
+		.icon.i-recommend-wb,
+		
+		.icon.i-lowstock,
+		.icon.i-lowstock-w,
+		.icon.i-lowstock-bw,
+		.icon.i-lowstock-wb,
+		
+		.icon.i-cart,
+		.icon.i-cart-w,
+		.icon.i-cart-bw,
+		.icon.i-cart-wb,
+		
+		/* Row 2: */
+		.icon.i-home,
+		.icon.i-home-w,
+		.icon.i-home-bw,
+		.icon.i-home-wb,
+		
+		.icon.i-left,
+		.icon.i-left-w,
+		.icon.i-left-bw,
+		.icon.i-left-wb,
+		
+		.icon.i-right,
+		.icon.i-right-w,
+		.icon.i-right-bw,
+		.icon.i-right-wb,
+		
+		.icon.i-top,
+		.icon.i-top-w,
+		.icon.i-top-bw,
+		.icon.i-top-wb,
+		
+		.icon.i-bottom,
+		.icon.i-bottom-w,
+		.icon.i-bottom-bw,
+		.icon.i-bottom-wb /* Last selector without trailing coma */
+		
+		{ background-image:url(../images/sprite@2x.png); background-size:500px 200px; }
+		
+		
+		/* All icons from icons-social.css
+		-------------------------------------------------------------- */
+		/* Row 1: */
+		.icon.i-telephone,
+		.icon.i-telephone-w,
+		
+		.icon.i-mobile,
+		.icon.i-mobile-w,
+	
+		.icon.i-skype,
+		.icon.i-skype-w,
+		
+		.icon.i-letter,
+		.icon.i-letter-w,
+	
+		.icon.i-location,
+		.icon.i-location-w,
+		
+		/* Row 2: */
+		.icon.i-twitter,
+		.icon.i-twitter-w,
+		
+		.icon.i-facebook,
+		.icon.i-facebook-w,
+		
+		.icon.i-googleplus,
+		.icon.i-googleplus-w,
+		
+		.icon.i-youtube,
+		.icon.i-youtube-w,
+		
+		.icon.i-vimeo,
+		.icon.i-vimeo-w,
+		
+		.icon.i-wordpress,
+		.icon.i-wordpress-w,
+		
+		.icon.i-pinterest,
+		.icon.i-pinterest-w,
+			
+		.icon.i-linkedin,
+		.icon.i-linkedin-w,
+		
+		.icon.i-blogger,
+		.icon.i-blogger-w,
+	
+		.icon.i-envato,
+		.icon.i-envato-w /* Last selector without trailing coma */
+		
+		{ background-image:url(../images/sprite-icons-social@2x.png); background-size:500px 200px; }
+	
+	} /* end: media query */
