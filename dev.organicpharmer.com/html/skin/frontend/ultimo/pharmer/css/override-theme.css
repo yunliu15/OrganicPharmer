@@ -585,8 +585,13 @@ margin-right: 2%;
 	}
 
 	.cal-alert p {line-height: 1.5; text-align:center; color: #81143A; font-style: italic; font-size:13px; font-family: 'MyriadProRegular' !important;}
-	
-	
+
+
+	/* u-pick meals */
+	#product-options-wrapper input[type=checkbox] {margin-top: 6px;}
+	#product-options-wrapper .calories {margin-left: 15px;}
+
+
 	/* My Account %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 	
@@ -771,13 +776,13 @@ margin-right: 2%;
 	.attr { width: 14.25%; float: left;}
 	.notice{ clear: both; float: left; padding-top: 40px; color: #000000; font-size: 13px;}
 	.at-title { border-bottom: 1px solid #000000; padding: 0 0 5px 0; margin: 0 0 5px 0;}
-	.nutrinfo { margin: 40px 0; overflow: auto;}
+	.nutrinfo { margin: 20px 0; overflow: auto;}
 	.product-make-my-day .nutrinfo {margin: 20px 0;}
 
 
-	.product-make-my-day .product-view .box-additional {margin-top: 0;}
+	.product-view .box-additional {margin-top: 0;}
 
-	.product-make-my-day .ingredients h3 {margin-top: 0;}
+	.ingredients h3 {margin-top: 0;}
 		/* Uncomment the following for the site with nothing on sale */
 	
 	/* .add-to-cart button.btn-cart, button.btn-cart { display: none; }
