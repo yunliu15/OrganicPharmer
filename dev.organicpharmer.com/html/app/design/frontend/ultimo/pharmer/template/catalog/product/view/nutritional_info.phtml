@@ -164,9 +164,10 @@ if($_product->getData('fiber'))
 
 		calculateNutrition();
 
+
 		jQuery('input[name^="bundle_option"]').on('change', calculateNutrition);
 		function calculateNutrition() {
-
+				console.log('calculate');
 			/* Below we create variables for all meals/bundle products. It is based on the value of the checkbox that is selected
 			 We make sure to grab the 'title' attribute data as the 'value' because it contains a string of calories/fat/etc that we can work with.
 			 */
