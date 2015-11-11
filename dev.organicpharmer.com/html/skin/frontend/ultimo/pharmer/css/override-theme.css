@@ -580,12 +580,29 @@ margin-right: 2%;
 	.product-my-day-of-food .nutrinfo {margin: 0 0 40px 0;}
 
 
-	/*.cal-alert {clear:both; border:2px solid #81143A; background: #F2F2F0; padding:15px; margin-top:40px; display: inline-block;}*/
-	.cal-alert {clear:both; border:2px solid #81143A; background: #F2F2F0; padding:15px 1%; margin-top:40px; display: inline-block;width: 98%;letter-spacing: .06em;
+
+
+	/*ly for daily meal */
+	.product-options, .product-options-bottom {margin-top:50px;}
+	/*.product-view .product-type-data .price-box {position:absolute;top:-100px;}*/
+	.product-view .meal-planner.product-type-data {
+		position:relative;top:-100px;left:20%;max-width:100px;
 	}
 
-	.cal-alert p {line-height: 1.5; text-align:center; color: #81143A; font-style: italic; font-size:13px; font-family: 'MyriadProRegular' !important;}
 
+
+	/*.cal-alert {clear:both; border:2px solid #81143A; background: #F2F2F0; padding:15px; margin-top:40px; display: inline-block;}*/
+	.cal-alert {clear:both; border:2px solid #81143A; background: #F2F2F0; padding: 17px; margin-top:40px; display: inline-block;width: 100%;letter-spacing: .06em;
+	}
+	
+	body.product-u-pick-meals p.availability, .price-box-bundle { display: none;} 
+
+	.cal-alert p {line-height: 1.5; text-align:center; color: #81143A; /*font-style: italic;*/ font-size:13px; font-family: 'MyriadProRegular' !important;}
+
+body.product-u-pick-meals .product-shop h3 {
+    font-size: 16px;
+    margin: 20px 0 5px 0; }
+	
 
 	/* u-pick meals */
 	#product-options-wrapper input[type=checkbox] {margin-top: 6px;}
@@ -776,7 +793,7 @@ margin-right: 2%;
 	.attr { width: 14.25%; float: left;}
 	.notice{ clear: both; float: left; padding-top: 40px; color: #000000; font-size: 13px;}
 	.at-title { border-bottom: 1px solid #000000; padding: 0 0 5px 0; margin: 0 0 5px 0;}
-	.nutrinfo { margin: 20px 0; overflow: auto;}
+	.nutrinfo { margin: 20px 0; overflow: auto; display:none; /*add display by ly*/}
 
 
 
@@ -865,6 +882,11 @@ position: relative;
 
 	
 @media (max-width : 768px) {
+/*meal planner*/
+	/*.product-view .meal-planner.product-type-data {
+		left:0px;
+	}*/
+
 
 .category-shop-all .mb-category-products .products-grid.equal-height .item .actions{
 	bottom:25px !important
@@ -922,6 +944,10 @@ margin-right: 2%;
 }
 	
 	@media (max-width : 480px) {
+
+		.product-view .meal-planner.product-type-data {
+			top:-130px;/*left:120px;*/
+		}
 			.products-grid button.btn-cart {
   width: 65%;
   float: right;
