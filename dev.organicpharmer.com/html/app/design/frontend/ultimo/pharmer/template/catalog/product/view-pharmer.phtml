@@ -169,10 +169,15 @@
             <?php if ($extrahint_html = $this->getChildHtml('extrahint')): //qty increments ?>
                 <div class="extrahint-wrapper"><?php echo $extrahint_html; ?></div>
             <?php endif; ?>
-            
-            <div class="product-type-data <?php echo $productTypeClasses; ?>"><?php echo $this->getChildHtml('product_type_data'); ?></div>
-            
-            <?php echo $this->getTierPriceHtml(); //tier prices ?>
+            <!--price-->
+			<?php $sku = $_product->getSku();?>
+			<?php /*ly*/if($sku<>"meal-planner"):?>
+				<div class="product-type-data <?php echo $productTypeClasses; ?>"><?php echo $this->getChildHtml('product_type_data'); ?></div>
+
+				<?php echo $this->getTierPriceHtml(); //tier prices ?><!--price-->
+			<?php endif; /*ly*/?>
+
+
 
             <?php if (!$this->hasOptions()): //add to cart when no options ?>
 			<?php 
@@ -223,7 +228,10 @@
 						<?php if($sku=="day1"):?>
 						<?php echo 'U-PICK MEALS'; ?>
 					    <?php endif;?>
-						<?php if($sku<>"day1"):?>
+						<?php /*ly*/if($sku=="meal-planner"):?>
+						<?php echo ''; ?>
+						<?php endif; /*ly*/?>
+						<?php if($sku<>"day1" && $sku<>"meal-planner"):?>
 						<?php echo 'Juice Details'; ?>
                         <?php endif;?>
 
@@ -286,7 +294,17 @@
         <?php if ($_product->isSaleable() && $this->hasOptions()): ?>
 			<?php if ($container2_html = $this->getChildChildHtml('container2', '', true, true)): ?>
         		<div class="box-additional <?php echo $container2ColGridClass; ?>">
+
 					<div class="container2-wrapper"><?php echo $container2_html; ?></div>
+
+
+
+					<?php /*ly*/if($sku=="meal-planner"):?>
+						<div class="meal-planner product-type-data <?php echo $productTypeClasses; ?>"><?php echo $this->getChildHtml('product_type_data'); ?></div>
+
+						<?php echo $this->getTierPriceHtml(); //tier prices ?>
+					<?php endif; /*ly*/?>
+
 				</div>
         	<?php endif; ?>
         <?php endif; ?>
