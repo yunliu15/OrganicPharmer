@@ -14,9 +14,9 @@ and there needs to be a lower case 'g' after values relating to fat, carb, prote
 <div class="nutrinfo">
 
 <div class="attr">
-<!--<div class="at-title">
+<div class="at-title">
 calories 
-</div>-->
+</div>
 <div class="at-number" id="calories">
 <?php $calories = $_product->getData('calories'); 
 $calories = preg_replace("/[^0-9,.]/", "", $calories);
@@ -26,7 +26,7 @@ echo $calories;
 </div></div>
 <!-- end attribute -->
 
-<!--
+
 <div class="attr">
 <div class="at-title">
 fat
@@ -36,10 +36,10 @@ fat
 $fat= preg_replace("/[^0-9,.]/", "", $fat);
 echo $fat;?>
 
-</div></div>-->
+</div></div>
 <!-- end attribute -->
 
-	<!--
+
 <div class="attr">
 <div class="at-title">
 carb
@@ -60,10 +60,10 @@ if($_product->getData('carb'))
 
 
 
-</div></div>-->
+</div></div>
 <!-- end attribute -->
 
-<!--
+
 <div class="attr">
 <div class="at-title">
 protein
@@ -82,9 +82,9 @@ if($_product->getData('protein'))
 }
 ?>
 	
-	</div></div>-->
+	</div></div>
 <!-- end attribute -->
-<!--
+
 <div class="attr">
 <div class="at-title">
 sugar
@@ -104,9 +104,9 @@ if($_product->getData('sugar'))
 }
 ?>
 
-</div></div>-->
+</div></div>
 <!-- end attribute -->
-<!--
+
 <div class="attr">
 <div class="at-title">
 sodium
@@ -124,9 +124,9 @@ if($_product->getData('sodium'))
 <?php
 }
 ?>
-</div></div>-->
+</div></div>
 <!-- end attribute -->
-<!--
+
 <div class="attr">
 <div class="at-title">
 fiber
@@ -145,7 +145,7 @@ if($_product->getData('fiber'))
 }
 ?>
 	
-</div></div>-->
+</div></div>
 <!-- end attribute -->
 
 </div>
@@ -162,12 +162,11 @@ if($_product->getData('fiber'))
 
 	jQuery(window).load(function(){
 
-		calculateNutrition();
+		//calculateNutrition();
 
-
-		jQuery('input[name^="bundle_option"]').on('change', calculateNutrition);
+		jQuery('#product_addtocart_form input[name*="option"]').on('change', calculateNutrition);
 		function calculateNutrition() {
-				console.log('calculate');
+
 			/* Below we create variables for all meals/bundle products. It is based on the value of the checkbox that is selected
 			 We make sure to grab the 'title' attribute data as the 'value' because it contains a string of calories/fat/etc that we can work with.
 			 */
@@ -288,6 +287,7 @@ if($_product->getData('fiber'))
 				jQuery('.options-list input:checked').each(function () {
 
 					var title = jQuery(this).attr("title");
+					//console.log(title);
 					var cal = title.split('_')[0];
 					calorie += parseInt(cal);
 				});

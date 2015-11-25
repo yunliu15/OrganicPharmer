@@ -470,6 +470,20 @@ margin-right: 2%;
 	/* Product view elements %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 	
+	
+	/** tooltip */
+	
+	.tagtip .content {
+    padding: 15px !important;
+    text-align: left;
+	font-size: 14px !important;
+	    line-height: 1.4em;
+		letter-spacing: 0.08em;
+}
+.tagtip {
+    max-width: 320px !important;
+}
+
 	/* Availability
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	*/
@@ -565,6 +579,11 @@ margin-right: 2%;
 
 	/* Bundle Products */
 
+	.product-meal-planner .juice-product-view .product-shop h3 {margin-top:20px;}
+	.product-meal-planner .juice-product-view .product-img-column {margin-left:19%;margin-right:0;width:36%;}
+	.product-meal-planner .juice-product-view .product-shop {text-align: justify;}
+	.product-meal-planner .juice-product-view .product-shop .std {letter-spacing: 0.08em;}
+
 	.product-options dt label {font-size:16px !important; font-family: 'MyriadProRegular' !important; text-transform: uppercase;}
 	.product-options dt {padding:10px; background: #F2F2F0; margin: 25px 0 20px 0;}
 	.product-options ul.options-list label {font-size:16px !important;}
@@ -579,13 +598,16 @@ margin-right: 2%;
 	.product-my-day-of-food .ingredients {display:none;}
 	.product-my-day-of-food .nutrinfo {margin: 0 0 40px 0;}
 
-
-
+	.product-meal-planner .option .radio-checkbox-img {width:40px !important;}
+	.product-meal-planner .radio-checkbox-text {width:300px !important; margin: 10px 5px !important;}
+	.product-meal-planner .option .small-image-preview {padding:0px!important;}
+	.product-meal-planner #product-options-wrapper input[type=checkbox] {margin-top:15px !important;}
+	.tagtip-question {background: url(../images/mageworx/customoptions/question.png) 0 0 no-repeat !important; float:left; margin-top:15px;}
 
 	/*ly for daily meal */
 	.product-options, .product-options-bottom {margin-top:50px;}
 	/*.product-view .product-type-data .price-box {position:absolute;top:-100px;}*/
-	.product-view .meal-planner.product-type-data {
+	.product-meal-planner .product-view .product-type-data {
 		position:relative;top:-100px;left:20%;max-width:100px;text-align:left;
 	}
 
@@ -793,9 +815,13 @@ body.product-u-pick-meals .product-shop h3 {
 	.attr { width: 14.25%; float: left;}
 	.notice{ clear: both; float: left; padding-top: 40px; color: #000000; font-size: 13px;}
 	.at-title { border-bottom: 1px solid #000000; padding: 0 0 5px 0; margin: 0 0 5px 0;}
-	.nutrinfo { margin: 20px 0; overflow: auto; display:none; /*add display by ly*/}
+	.nutrinfo { margin: 20px 0; overflow: auto; /*display:none; add display by ly*/}
 
+	.product-view .ingredients {
 
+		display: block;
+		margin-top:20px;
+	}
 
 	.product-view .box-additional {margin-top: 0;}
 
@@ -880,13 +906,34 @@ position: relative;
 .post-list-item { margin-bottom: 100px;}
 .post-meta { display: none;}
 
+@media (max-width : 980px) {
+	.product-meal-planner .juice-product-view .product-img-column img {height:auto;}
+}
 	
 @media (max-width : 768px) {
+	
+	/** tooltip on tablet */
+	
+
+span.tagtip-question { display: none !important;}
+.option .radio-checkbox-text {
+   max-width: 70%;
+}
+
+
 /*meal planner*/
 	/*.product-view .meal-planner.product-type-data {
 		left:0px;
 	}*/
+	.product-meal-planner .juice-product-view .product-img-column {width:90%!important; margin:auto!important;float:none;}
+	.product-meal-planner .juice-product-view .product-img-column img {width:100%; height:auto;}
 
+	.product-meal-planner .juice-product-view .product-shop {text-align: left!important;}
+
+	.product-meal-planner .juice-product-view .box-additional .product-options {width:100%;margin-left:0;}
+	.product-meal-planner .product-view .product-type-data {left:0;}
+
+}
 
 .category-shop-all .mb-category-products .products-grid.equal-height .item .actions{
 	bottom:25px !important
@@ -924,7 +971,7 @@ margin-top: 0px;
 
 		
 		.is-blog .grid-col2-main {
-width: 96% !important;
+
 margin-left: 2%;
 margin-right: 2%;
 }
@@ -945,7 +992,7 @@ margin-right: 2%;
 	
 	@media (max-width : 480px) {
 
-		.product-view .meal-planner.product-type-data {
+		.product-meal-planner .product-view .product-type-data {
 			top:-100px;
 		}
 			.products-grid button.btn-cart {
@@ -994,8 +1041,18 @@ body.category-infused-cold-pressed .category-products-grid h2.product-name, body
 padding-left: 35px;
 padding-right: 0px;
 }
-.cat-body { padding: 0 0 30px 0;} 
-	}
+.cat-body { padding: 0 0 30px 0;}
+
+/*meal planner */
+
+		/*.product-meal-planner .juice-product-view .product-img-column {width:90%!important; margin:auto!important;float:none;}
+		.product-meal-planner .juice-product-view .product-img-column img {width:100%; height:auto;}
+
+		.product-meal-planner .juice-product-view .product-shop {text-align: left!important;}
+
+		.product-meal-planner .juice-product-view .box-additional .product-options {width:100%;margin-left:0;}
+
+	}*/
 	
 	@media
 	only screen and (-webkit-min-device-pixel-ratio: 1.5),

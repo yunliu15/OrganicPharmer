@@ -21,10 +21,22 @@
 <script type="text/javascript">
     var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
 </script>
+<script type="text/javascript">
+<!--
+    function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
+//-->
+</script>
 <div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
 
 <?php $catMainLower = strtolower($catMain); ?>
 <div class="product-view <?php echo $catMainLower; ?>-product-view <?php if ($catMainLower == 'food') echo 'food-review-fix'; ?>">
+
     <form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
 
     	<?php echo $this->getBlockHtml('formkey'); ?>
@@ -158,7 +170,12 @@
             <div class="product-name">
                 <h1><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
             </div>
-           
+            
+            <!--<div class="ingredients">
+               	<h3>Ingredients:</h3>
+                <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getIngredients()), 'ingredients') ?></div>
+            </div>-->
+
 
             <?php if ($theme->getCfg('product_page/sku')): ?>
                 <div class="sku"><span><?php echo $this->__('SKU'); ?>: </span><?php echo $_product->getSku(); ?></div>
@@ -169,31 +186,28 @@
             <?php if ($extrahint_html = $this->getChildHtml('extrahint')): //qty increments ?>
                 <div class="extrahint-wrapper"><?php echo $extrahint_html; ?></div>
             <?php endif; ?>
-            <!--price-->
-			<?php $sku = $_product->getSku();?>
-			<?php /*ly*/if($sku<>"meal-planner"):?>
-				<div class="product-type-data <?php echo $productTypeClasses; ?>"><?php echo $this->getChildHtml('product_type_data'); ?></div>
-
-				<?php echo $this->getTierPriceHtml(); //tier prices ?><!--price-->
-			<?php endif; /*ly*/?>
-
-
+            
+            <div class="product-type-data <?php echo $productTypeClasses; ?>"><?php echo $this->getChildHtml('product_type_data'); ?></div>
+            
+            <?php echo $this->getTierPriceHtml(); //tier prices ?>
 
             <?php if (!$this->hasOptions()): //add to cart when no options ?>
-			<?php 
-			//$productUnavailable	= $_helper->productAttribute($_product, $_product->getTempUnavailable(), 'temp_unavailable'); 
-			$productUnavailable = $_product->getTempUnavailable();
-			//echo $_product->getChildrenIds() . 'test1233';
-			//echo $this->getProduct()->getId() . 'b';
-			//echo $_product->getId() . 'a';
-			?>
-                <?php if($_product->isSaleable() && strlen($productUnavailable) == 0): ?>
-                    <div class="add-to-box">
-                        <?php echo $this->getChildHtml('addtocart') ?>
-                    </div>
-                <?php else: ?>
-					<?php echo $productUnavailable; ?>
-				<?php endif; ?>
+                <?php 
+	                //$productUnavailable = $this->getProduct()->getAttributeText('temp_unavailable');
+	                $productUnavailable	= $_helper->productAttribute($_product, $_product->getTempUnavailable(), 'temp_unavailable');
+	                //$productUnavailable = $_product->getTempUnavailable();
+	                if($_product->isSaleable()): ?>
+	                	<?php if (strlen($productUnavailable) == 0): ?>
+							<div class="add-to-box">
+								<?php echo $this->getChildHtml('addtocart') ?>
+                    		</div>
+                    	<?php endif; ?>
+                    	<?php if (strlen($productUnavailable) > 0): ?>
+                    		<div class="status-unavail">
+	                    		<?php echo $productUnavailable; ?>
+                    		</div>
+                    	<?php endif; ?>
+                <?php endif; ?>
                 <?php echo $this->getChildHtml('extra_buttons') ?>
             <?php endif; ?>
 
@@ -211,9 +225,7 @@
             
             <?php echo $this->getChildHtml('other'); ?>
             
-            <?php //mc moved commented here // ?>
-            
-            <?php $_description = $this->getProduct()->getDescription(); ?>
+            <?php $_description = $this->getProduct()->getDescription(); ?> <?php //mc begin //?>
 			<?php if ($_description): ?>
 				<?php $desc = $this->helper('catalog/output')->productAttribute($this->getProduct(), $_description, 'description'); ?>
 				<?php
@@ -223,19 +235,7 @@
 					?>
 				<?php if ($catMain == 'Juice') : ?>
 					<h3>
-
-						<?php $sku = $_product->getSku();?>
-						<?php if($sku=="day1"):?>
-						<?php echo 'U-PICK MEALS'; ?>
-					    <?php endif;?>
-						<?php /*ly*/if($sku=="meal-planner"):?>
-						<?php echo ''; ?>
-						<?php endif; /*ly*/?>
-						<?php if($sku<>"day1" && $sku<>"meal-planner"):?>
 						<?php echo 'Juice Details'; ?>
-                        <?php endif;?>
-
-
 					</h3>
 					<?php else: ?>
 					<h3>
@@ -243,12 +243,52 @@
 					</h3>	
 				<?php endif; ?>
 				
-
+				<?php if (count($descArray) > 50) : ?>
+					<div class="std">
+						<?php //echo substr($desc, 0, 250) . '...'; ?>
+						<?php
+							$shortArray = array_slice($descArray, 0, 50);
+							$x = 0;
+							while ($x < count($shortArray)) {
+								if (strpos($shortArray[count($shortArray) - $x], '.') !== FALSE) {
+									//echo 'test';
+									$carryOver = $x;
+									break;
+								}
+								else {
+									//echo 'false';
+								}
+								
+								//$pos = strpos($shortArray[count($shortArray) - $x], '.');
+								//if ($pos) {
+							//		echo $x . ' a ' . $shortArray[count($shortArray) - $x];
+							//	}
+								$x++;
+							}
+							//echo $carryOver;
+							$y = 0;
+							while ($y < count($shortArray)-$carryOver + 1) {
+								//if ($y == count($shortArray)-$carryOver) {
+								//	echo $shortArray[$y] . '..';
+								//}
+								//else {
+									echo $shortArray[$y] . ' ';
+								//}
+								$y++;
+							}
+							
+						?>
+						<div class="read-more-info">
+							<a href="#readmore" onclick="toggle_visibility('rmore');">Read More</a>
+						</div>
+					</div>
+				<?php else : ?>
 					<div class="std">
 						<?php echo $desc; ?>
 					</div>
+				<?php endif; ?>
+			<?php endif; ?> <?php //mc end //?>
 
-			<?php endif; ?>
 
             <?php if ($tmpHtml = $this->getChildHtml('block_product_primary_bottom')): ?>
             	<div class="feature-wrapper top-border block_product_primary_bottom"><?php echo $tmpHtml; ?></div>
@@ -294,17 +334,7 @@
         <?php if ($_product->isSaleable() && $this->hasOptions()): ?>
 			<?php if ($container2_html = $this->getChildChildHtml('container2', '', true, true)): ?>
         		<div class="box-additional <?php echo $container2ColGridClass; ?>">
-
 					<div class="container2-wrapper"><?php echo $container2_html; ?></div>
-
-
-
-					<?php /*ly*/if($sku=="meal-planner"):?>
-						<div class="meal-planner product-type-data <?php echo $productTypeClasses; ?>"><?php echo $this->getChildHtml('product_type_data'); ?></div>
-
-						<?php echo $this->getTierPriceHtml(); //tier prices ?>
-					<?php endif; /*ly*/?>
-
 				</div>
         	<?php endif; ?>
         <?php endif; ?>
@@ -355,7 +385,7 @@
     //]]>
     </script>
     
-	<div class="prod-desc box-additional box-tabs <?php echo $collatPrimaryColGridClass; ?>">
+<div class="prod-desc box-additional box-tabs <?php echo $collatPrimaryColGridClass; ?>"> <?php // mc begin //?>
 		<!--<?php $_description = $this->getProduct()->getDescription(); ?>
 		<?php if ($_description): ?>
 		
@@ -371,14 +401,25 @@
 			</div>
 		<?php endif; ?>--> <?php // mc commented description ?>
 		
-	
-		
+		<?php if (count($descArray) > 50) : ?>
+		<div id="rmore" style="display: none;">
+		    <a name="readmore">
+			<h3> More Info </h3> <?php //mc added //?>
+			<?php
+					while ($y < count($descArray)) {
+						echo $descArray[$y] . ' '; 
+						$y++;
+					}
+					?>
+				</div>
+		<?php endif; ?>
+		    
 		<div class="ingredients">
-            <h3>Calorie Counter</h3>
+            <h3>Ingredients:</h3>
             <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getIngredients()), 'ingredients') ?></div>
         </div>
 		
-		<?php include("view/nutritional_info.phtml"); ?>
+		<?php include("view/nutritional_info.phtml"); ?> <?php //mc end //?>
 
     	<?php $info_tabs_html = trim($this->getChildHtml('info_tabs'));
 			if ($info_tabs_html) echo $info_tabs_html; ?>

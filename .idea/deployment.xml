@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="Organic Pharmer">
+  <component name="PublishConfigData" serverName="Organic Pharmer - SSH">
     <serverData>
-      <paths name="Organic Pharmer">
+      <paths name="Organic Pharmer - SSH">
         <serverdata>
           <mappings>
             <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
           </mappings>
+          <excludedPaths>
+            <excludedPath path="/public_html" />
+          </excludedPaths>
         </serverdata>
       </paths>
     </serverData>
